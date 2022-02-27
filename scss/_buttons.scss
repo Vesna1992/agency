@@ -1,0 +1,42 @@
+button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding: 23px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.btn-white {
+    background: linear-gradient(to right, $blue-darker 50%, $white 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    border-radius: 35px;
+    color: $blue;
+    width: 250px;
+    &:hover {
+        color: $white;
+        background-position: left bottom;
+    }
+}
+
+.btn-blue {
+    background: linear-gradient(to right, $white 50%, $blue-darker 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border-radius: 40px;
+    color: $white;
+    width: 300px;
+    border: 1px solid $blue-darker;
+    &:hover {
+        color: $blue-darker;
+        border: 1px solid $blue-darker;
+        background-position: left bottom;
+    }
+    @include mobile {
+        width: 278px;
+    }
+}

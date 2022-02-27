@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+body {
+   font-family: 'Raleway', sans-serif;
+}
+
+p {
+    line-height: 26px;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition;
+}
+
+.wrapper {
+    max-width: 1228px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    @include mobile {
+        padding: 0 20px;
+    }
+}
+

@@ -1,0 +1,122 @@
+.header {
+    min-height: 848px;
+    background: url(../img/header-bg.png);
+    background-size: cover;
+    background-position: center center;
+    color: $white;
+    position: relative;
+    @include largeScreens{
+        background-position: center bottom;
+    }
+    @include mobile {
+        min-height: 0;
+        padding-bottom: 200px;
+    }
+    &__top-bar {
+        padding: 42px 0 172px;
+        @include flex(space-between, center);
+        @include mobile {
+            padding-bottom: 80px;
+        }
+    }
+    &__toggler {
+        display: none;
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        background: url(../img/bars.png);
+        border-radius: 10%;
+        @include mobile {
+            display: block;
+        }
+        &.change-icon {
+            background: url(../img/cross.png);
+        }
+    }
+    &__nav {
+        @include mobile {
+            opacity: 0;
+            height: 0;
+            transition: .3s cubic-bezier(0.075, 0.82, 0.265, 1);
+            &.display {
+                opacity: 1;
+                height: auto;
+                background-color: rgba(2, 32, 53, 0.096);
+                margin-top: 20px;
+                padding: 50px 0;
+                border-radius: 15px;
+            }
+        }
+    }
+    &__list {
+        @include flex(space-between, center);
+    }
+    &__item {
+        @include mobile {
+            flex: 0 0 100%;
+            padding: 25px;
+        }
+    }
+    &__link {
+        color: $white;
+        font-size: 18px;
+        margin-left: 45px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $white;
+            position: absolute;
+            left: -15%;
+            bottom: -4px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: $transition;
+        }
+        &:hover {
+             &:before {
+                transform: scaleX(1.3);
+             } 
+        }
+    }
+    &__text {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    &__heading {
+        font-size: 46px;
+        font-weight: 700;
+        @include mobile {
+            font-size: 38px;
+        }
+    }
+    &__content {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 20px auto 30px;
+    }
+    &__button {
+        margin-bottom: 20px;
+    }
+    &__img-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        z-index: 1;
+        max-width: 653px;
+        margin: 0 auto;
+        padding: 0 100px;
+        @media (max-width: 800px) {
+            padding: 0 130px;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &__img {
+        max-width: 100%;
+    }
+}

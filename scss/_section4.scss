@@ -1,0 +1,78 @@
+.section4 {
+    padding: 50px 0 20px;
+    font-size: 20px;
+    @include mobile-and-tablet {
+        padding: 50px 0;
+    }
+    .wrapper {
+        @include flex(space-between, center);
+    }
+    &__text {
+        flex: 0 0 calc(100% - 580px);
+        @include mobile-and-tablet {
+            flex: 0 0 100%;
+        }
+    }
+    &__images {
+        flex: 0 0 560px;
+        position: relative;
+        margin-top: 130px;
+        @include mobile-and-tablet {
+            margin: 160px auto 0;
+        }
+        @include mobile {
+            flex: 0 0 100%;
+            margin: 30px auto 0;
+        }
+    }
+    &__heading {
+        font-size: 36px;
+        font-weight: bold;
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+    &__item {
+        margin-top: 20px;
+        @include flex(space-between, flex-start);
+        P {
+            flex: 0 0 calc(100% - 30px);
+        }
+    }
+    &__icon {
+        color: #244adf;
+        font-size: 24px;
+        font-weight: bold;
+        flex: 0 0 24px;
+    }
+    &__content {
+        margin-top: 30px;
+    }
+    &__link {
+        color: #244adf;
+        text-transform: uppercase;
+        font-weight: 600;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__img {
+        max-width: 100%;
+        z-index: 0;
+        border-radius: 5px;
+    }
+    &__img-small {
+        background: linear-gradient(150deg, rgba(28, 32, 94, 0.6) 0%, rgb(28,216,233) 100%) ,url(../img/section4-2.jpg);
+        background-size: cover;
+        width: 382px;
+        height: 286px;
+        z-index: 1;
+        position: absolute;
+        top: -130px;
+        right: -50px;
+        border-radius: 5px;
+        @include mobile {
+           display: none;
+        }
+    }
+}
